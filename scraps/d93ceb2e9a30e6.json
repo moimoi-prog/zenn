@@ -1,0 +1,18 @@
+{
+  "title": "DateFormatあれこれ",
+  "closed": false,
+  "archived": false,
+  "created_at": "2022-03-20",
+  "comments": [
+    {
+      "author": "moimoi_prog",
+      "created_at": "2022-03-20",
+      "body_markdown": "日本語化する時は、DateFormatの第二引数に'ja'を渡す\n```dart\nDateFormat outputFormat = DateFormat('pattern', 'ja');\n```"
+    },
+    {
+      "author": "moimoi_prog",
+      "created_at": "2022-03-20",
+      "body_markdown": "時間を24時間表記で表示したい時は、大文字のHを使用する\n```dart\nDateFormat outputFormat = DateFormat('yyyy/MM/dd HH:mm', 'ja');\n```"
+    }
+  ]
+}
