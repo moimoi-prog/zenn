@@ -1,6 +1,6 @@
 ---
 title: "Flutter: iOSでSelectableTextで文字を選択するとクラッシュする"
-emoji: "📘"
+emoji: "🐦"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["Flutter", "iOS", "Android"]
 published: true
@@ -21,10 +21,11 @@ GlobalCupertinoLocalizations.delegate,
 ```
 
 実装例
-'''dart
+
+```dart
 MaterialApp.router(
-localizationsDelegates: const [
-GlobalCupertinoLocalizations.delegate,
-],
+  localizationsDelegates: const [
+    GlobalCupertinoLocalizations.delegate,
+  ],
 )
-'''
+```
