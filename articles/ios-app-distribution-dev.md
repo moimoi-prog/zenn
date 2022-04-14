@@ -1,9 +1,9 @@
 ---
-title: "iOS: App Distributionでアプリを配信するまで"
+title: "自分用: App DistributionでiOSアプリを配信するまで"
 emoji: "🍣"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: []
-published: false
+published: true
 ---
 
 ### 証明書を作る
@@ -14,7 +14,7 @@ https://i-app-tec.com/ios/apply-application.html
 
 https://i-app-tec.com/ios/ios-app-ids.html
 
-### Provisioning Profile を作ってみる
+### Provisioning Profile を作る
 
 https://i-app-tec.com/ios/provisioning-profile.html
 
