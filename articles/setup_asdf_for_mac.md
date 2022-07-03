@@ -6,7 +6,7 @@ topics: []
 published: true
 ---
 
-最近 PC を買い替えたので使っているツールを見直した際に、asdf というツールを導入したので紹介します。
+asdf というツールを導入したので紹介します。
 
 ## 環境
 
@@ -14,19 +14,19 @@ OS ... macOS Monterey
 
 ## asdf とは
 
-プログラミング言語や各種ツールのバージョン管理を一括で行うことができる CLI ツールです。
+プログラミング言語や各種ツールのバージョン管理を行うことができる CLI ツールです。
 https://asdf-vm.com/
 
 特徴として
 
-1. ひとつのツールで言語やツールのバージョンを管理できること
-2. ひとつの構成ファイルでプロジェクトで使用する言語のバージョンを指定できること
+1. 言語やツールのバージョンを、ひとつのツールで管理できること
+2. プロジェクトで使用する言語のバージョンを、ひとつの構成ファイルで指定できること
 
 などが挙げられます。
 
 ## 導入前の課題
 
-1. Flutter は fvm、Python は pyenv、Node.js は nvm etc ... というようにそれぞれの言語で別々のツールを使用していたため、管理が煩雑になりがちな点
+1. Flutter は fvm、Python は pyenv、Node.js は nvm etc ... というように、それぞれの言語で別々のツールを使用していたため、管理が煩雑になりがちな点
 2. プロジェクトの切り替えと環境の切り替えが連動していないため、いちいち環境を切り替える必要があり面倒な点
 3. コマンドを実行する前に fvm をつけるのがだるい点(flutter のみ)
 
@@ -36,7 +36,7 @@ asdf を導入すればこれらの課題を解決できるため導入しまし
 
 今回は Flutter を例にして解説していきます。
 
-1. asdf のインストール
+**asdf のインストール**
 
 ※homebrew がインストールされている前提
 
@@ -48,7 +48,7 @@ $ brew install asdf
 $ echo -e "\n. $(brew --prefix asdf)/asdf.sh" >> ${ZDOTDIR:-~}/.zshrc
 ```
 
-1. asdf で flutter で使用可能にする
+**asdf で flutter で使用可能にする**
 
 ```bash
 # 使用可能なpluginを確認
@@ -73,7 +73,7 @@ $ asdf install flutter 3.0.3-stable
 $ asdf list flutter
 ```
 
-1. プロジェクトで使用する Flutter バージョンを指定
+**プロジェクトで使用する Flutter バージョンを指定**
 
 ```bash
 # プロジェクトのルートディレクトリに移動
@@ -84,11 +84,14 @@ $ asdf local flutter 3.0.3-stable
 
 # ここで.tool-versionsが作成される
 
-# Android Studio > Preference > Languages & Frameworks > Flutter SDK Pathに
-# asdfでインストールしたFlutterのSDKパスを指定
+# Android Studio
+# > Preference
+# > Languages & Frameworks
+# > Flutter SDK Path
+# にasdfでインストールしたFlutterのSDKパスを指定
 
 # 指定したバージョンになっているか確認
 $ flutter --version
 ```
 
-ここまでで asdf の導入 ~ プロジェクトと Flutter の紐付けまでが完了したので、最後にビルドして問題なければ無事終了です。
+最後にビルドして問題なければ完了です。
